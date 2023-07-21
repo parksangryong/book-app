@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+import BookList from "./components/BookList";
+import BookForm from "./components/BookForm";
+import ShoppingCart from "./components/ShoppingCart";
+import Review from "./components/Review";
+import Recommendation from "./components/Recommendation";
+import UserProfile from "./components/UserProfile";
+import Mybook from "./components/Mybook";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route path="/" element={<BookList />} />
+        <Route path="/books" element={<BookList />} />
+        <Route path="/books/add" element={<BookForm />} />
+        <Route path="/cart" element={<ShoppingCart />} />
+        <Route path="/review/:bookId" element={<Review />} />
+        <Route path="/recommendation" element={<Recommendation />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<UserProfile />} />
+        <Route path="/myBook" element={<Mybook />} />
+      </Routes>
     </div>
   );
 }

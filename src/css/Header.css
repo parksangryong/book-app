@@ -1,0 +1,24 @@
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: aliceblue;
+}
+.hi-box {
+  width: 100%;
+  height: 30px;
+  background-color: gray;
+  text-align: right;
+}
+.hi {
+  margin-right: 5%;
+  line-height: 30px;
+  color: white;
+}
+.header ul li {
+  display: inline-block;
+  width: 16.6%;
+  line-height: 70px;
+  text-align: center;
+  font-size: 1.7em;
+  cursor: pointer;
+}
