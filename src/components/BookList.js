@@ -4,18 +4,46 @@ import "../css/BookList.css";
 import { Link } from "react-router-dom";
 import { fetchBooks } from "../actions/bookActions";
 import { connect } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function BookList({ books, fetchBooks, id }) {
   const booklist = books;
+  const navigate = useNavigate();
 
   useEffect(() => {
     //getBooklist();
     fetchBooks();
   }, []);
 
+  const addCart = async (bookid) => {
+    if (id) {
+      //console.log(bookid, id);
+      const postObj = { user_id: id, book_id: bookid, quantity: 1 };
+
+      const result = await axios.post(
+        `https://port-0-todolist-node-kvmh2mljl31rz6.sel4.cloudtype.app/cart`,
+        postObj
+      );
+
+      //console.log(result);
+      alert(result.data);
+    } else {
+      alert("로그인 해주세요.");
+    }
+  };
+
+  const moveInfo = (index) => {
+    navigate("/books/info?query=" + index);
+  };
+
   const bookresult = booklist.map((data, index) => (
     <div id="book" key={index}>
-      <img src={data.image_url} alt={data.title} />
+      <img
+        onClick={() => moveInfo(data.id)}
+        src={data.image_url}
+        alt={data.title}
+      />
       <div className="book-text">
         <div className="book-title">
           <span>제목 : </span>
@@ -35,7 +63,7 @@ function BookList({ books, fetchBooks, id }) {
         </div>
       </div>
       <div className="book-btn">
-        <button>장바구니에 담기</button>
+        <button onClick={() => addCart(data.id)}>장바구니에 담기</button>
         <button>리뷰 쓰기</button>
       </div>
     </div>

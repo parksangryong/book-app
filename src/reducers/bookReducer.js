@@ -1,5 +1,6 @@
 const initialState = {
   books: [],
+  mybooks: [],
   error: null,
 };
 
@@ -20,13 +21,13 @@ const bookReducer = (state = initialState, action) => {
     case "MY_BOOKS_SUCCESS":
       return {
         ...state,
-        books: action.payload,
+        mybooks: action.payload,
         error: null,
       };
     case "MY_BOOKS_FAILURE":
       return {
         ...state,
-        books: [],
+        mybooks: [],
         error: action.payload,
       };
     case "ADD_BOOK_SUCCESS":

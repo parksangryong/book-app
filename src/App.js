@@ -10,6 +10,7 @@ import Review from "./components/Review";
 import Recommendation from "./components/Recommendation";
 import UserProfile from "./components/UserProfile";
 import Mybook from "./components/Mybook";
+import BookDetail from "./components/BookDetail";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<BookList />} />
+        <Route path="/books/info/*" element={<BookDetail />} />
         <Route path="/books" element={<BookList />} />
         <Route path="/books/add" element={<BookForm />} />
         <Route path="/cart" element={<ShoppingCart />} />

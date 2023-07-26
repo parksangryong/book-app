@@ -24,6 +24,7 @@ function Login({ loginSuccess }) {
         alert(data.data.message);
         const email = data.data.data[0].email;
         const id = data.data.data[0].id;
+        //console.log(id, username, password, email);
         loginSuccess(id, username, password, email);
         navigate("/books");
       })

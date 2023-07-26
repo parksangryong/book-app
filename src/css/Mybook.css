@@ -1,9 +1,9 @@
-#book {
+#book-item {
   width: 24%;
   display: inline-block;
   border: 1px solid red;
 }
 
-#book img {
+#book-item img {
   width: 50px;
 }

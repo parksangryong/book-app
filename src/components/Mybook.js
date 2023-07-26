@@ -3,49 +3,40 @@ import "../css/Mybook.css";
 import { useEffect } from "react";
 import { connect } from "react-redux";
 import { myBooks } from "../actions/bookActions";
+import Mybookitem from "./Mybookitem";
 
-function Mybook({ id, books, myBooks }) {
-  const mylist = books;
+function Mybook({ id, mybooks, myBooks }) {
+  const mylist = mybooks;
+  const len = mybooks.length;
 
   useEffect(() => {
     myBooks(id);
-  }, []);
+
+    //console.log(mylist);
+  }, [len]);
+
+  const pop = () => {
+    myBooks(id);
+  };
 
   const myresult = mylist.map((data, index) => (
-    <div id="book" key={index}>
-      <img src={data.image_url} alt={data.title} />
-      <div className="book-text">
-        <div className="book-title">
-          <span>제목 : </span>
-          <span>{data.title}</span>
-        </div>
-        <div className="book-author">
-          <span>작가 : </span>
-          <span>{data.author}</span>
-        </div>
-        <div className="book-price">
-          <span>가격 : </span>
-          <span>{data.price}</span>
-        </div>
-        <div className="book-inven">
-          <span>재고 : </span>
-          <span>{data.inven}</span>
-        </div>
-        <div className="book-description">
-          <span>내용 : </span>
-          <span>{data.description}</span>
-        </div>
-      </div>
-      <div className="book-btn">
-        <button>정보 수정</button>
-        <button>도서 삭제</button>
-      </div>
-    </div>
+    <Mybookitem
+      key={index}
+      id={data.id}
+      title={data.title}
+      author={data.author}
+      price={data.price}
+      inven={data.inven}
+      description={data.description}
+      image_url={data.image_url}
+      seller_id={id}
+      pop={pop}
+    />
   ));
 
   return (
     <div>
-      <h2>내가 올린 책</h2>
+      <h2>내가 올린 책({len})</h2>
       {myresult}
     </div>
   );
@@ -53,7 +44,7 @@ function Mybook({ id, books, myBooks }) {
 
 const mapStateToProps = (state) => ({
   id: state.auth.id,
-  books: state.book.books,
+  mybooks: state.book.mybooks,
 });
 
 const mapDispatchToProps = {
