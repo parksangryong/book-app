@@ -64,7 +64,6 @@ function BookList({ books, fetchBooks, id }) {
       </div>
       <div className="book-btn">
         <button onClick={() => addCart(data.id)}>장바구니에 담기</button>
-        <button>리뷰 쓰기</button>
       </div>
     </div>
   ));

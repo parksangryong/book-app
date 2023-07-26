@@ -6,11 +6,11 @@ import SignUp from "./components/SignUp";
 import BookList from "./components/BookList";
 import BookForm from "./components/BookForm";
 import ShoppingCart from "./components/ShoppingCart";
-import Review from "./components/Review";
 import Recommendation from "./components/Recommendation";
 import UserProfile from "./components/UserProfile";
 import Mybook from "./components/Mybook";
 import BookDetail from "./components/BookDetail";
+import ReviewForm from "./components/ReviewForm";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Route path="/books" element={<BookList />} />
         <Route path="/books/add" element={<BookForm />} />
         <Route path="/cart" element={<ShoppingCart />} />
-        <Route path="/review/:bookId" element={<Review />} />
+        <Route path="/review/*" element={<ReviewForm />} />
         <Route path="/recommendation" element={<Recommendation />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
