@@ -13,6 +13,7 @@ function BookDetail({ id }) {
   const [review, setReview] = useState([]);
   const navigate = useNavigate();
   const [opt, setOpt] = useState(0);
+  const [grade, setGrade] = useState(0);
 
   useEffect(() => {
     const queryObj = queryString.parse(window.location.search);
@@ -39,6 +40,17 @@ function BookDetail({ id }) {
     //console.log(result.data);
     setReview(result.data);
     setOpt(result.data.length);
+
+    let a = 0;
+
+    for (var i = 0; i < result.data.length; i++) {
+      a += result.data[i].rating;
+      //console.log(a);
+    }
+
+    const avg = Math.round((a / result.data.length) * 10) / 10;
+
+    setGrade(avg);
   };
 
   const addCart = async () => {
@@ -96,7 +108,7 @@ function BookDetail({ id }) {
         <hr />
 
         <div className="review">
-          리뷰개수({opt})
+          리뷰개수({opt}) / {grade} 점
           {id ? (
             <button
               onClick={() =>
