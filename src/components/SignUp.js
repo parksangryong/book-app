@@ -37,27 +37,36 @@ function SignUp({ loginOut }) {
   };
 
   return (
-    <div>
-      <h1>회원가입</h1>
-      <input
-        type="text"
-        placeholder="사용자이름"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="이메일명"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="비밀번호"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleSignUp}>회원가입</button>
+    <div id="sign">
+      <h1>Book Shop SignUp</h1>
+      <div className="sign-id">
+        <input
+          type="text"
+          placeholder="사용자 ID"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </div>
+      <div className="sign-em">
+        <input
+          type="text"
+          placeholder="이메일명"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </div>
+      <div className="sign-pw">
+        <input
+          type="password"
+          placeholder="비밀번호"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+
+      <button className="sign-btn" onClick={handleSignUp}>
+        회원가입
+      </button>
     </div>
   );
 }

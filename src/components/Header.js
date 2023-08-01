@@ -6,8 +6,11 @@ import { loginOut } from "../actions/authActions";
 import { useNavigate } from "react-router-dom";
 
 function Header({ user, loginOut }) {
-  //console.log(user);
+  //console.log(window.location.pathname);
   const navigate = useNavigate();
+
+  const check = window.location.pathname;
+  //console.log(check);
 
   const logouts = () => {
     loginOut();
@@ -24,26 +27,58 @@ function Header({ user, loginOut }) {
 
       <ul>
         <li>
-          <Link to="/books">상품목록</Link>
+          <Link to="/books" className={check === "/books" ? "active" : ""}>
+            상품목록
+          </Link>
         </li>
         <li>
-          <Link to="/recommendation">추천</Link>
+          <Link
+            to="/recommendation"
+            className={check === "/recommendation" ? "active" : ""}
+          >
+            추천
+          </Link>
         </li>
-        <li>{user ? <Link to="/mybook">판매정보</Link> : ""}</li>
-        <li>{user ? <Link to="/cart">장바구니</Link> : ""}</li>
+        <li>
+          {user ? (
+            <Link to="/mybook" className={check === "/mybook" ? "active" : ""}>
+              판매정보
+            </Link>
+          ) : (
+            ""
+          )}
+        </li>
+        <li>
+          {user ? (
+            <Link to="/cart" className={check === "/cart" ? "active" : ""}>
+              장바구니
+            </Link>
+          ) : (
+            ""
+          )}
+        </li>
 
         <li>
           {user ? (
-            <Link to="/profile">회원수정</Link>
+            <Link
+              to="/profile"
+              className={check === "/profile" ? "active" : ""}
+            >
+              회원수정
+            </Link>
           ) : (
-            <Link to="/signup">회원가입</Link>
+            <Link to="/signup" className={check === "/signup" ? "active" : ""}>
+              회원가입
+            </Link>
           )}
         </li>
         <li>
           {user ? (
             <div onClick={logouts}>로그아웃</div>
           ) : (
-            <Link to="/login">로그인</Link>
+            <Link to="/login" className={check === "/login" ? "active" : ""}>
+              로그인
+            </Link>
           )}
         </li>
       </ul>

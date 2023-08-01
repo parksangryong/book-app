@@ -68,11 +68,20 @@ function ShoppingCart({ id }) {
   };
 
   return (
-    <div>
-      장바구니({re}) {msg}
+    <div id="shopcart">
+      <h2>Book Shop Cart ({re})</h2>
       {result}
-      총권수 : {its} 권 / 총가격 : {moneys} 원
-      <button onClick={getMoneys}>전체 주문</button>
+
+      <div className="cartsub">
+        <div className="subtext">
+          총권수 : {its} 권 / 총가격 : {moneys} 원
+        </div>
+        <div className="subbtn">
+          <button onClick={getMoneys}>전체 주문</button>
+        </div>
+      </div>
+
+      <h5>{msg}</h5>
     </div>
   );
 }

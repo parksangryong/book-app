@@ -35,8 +35,8 @@ function Mybook({ id, mybooks, myBooks }) {
   ));
 
   return (
-    <div>
-      <h2>내가 올린 책({len})</h2>
+    <div id="mybook">
+      <h2>내가 올린 책({len} 권)</h2>
       {myresult}
     </div>
   );

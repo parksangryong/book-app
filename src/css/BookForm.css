@@ -1,0 +1,65 @@
+#form h1 {
+  width: 100%;
+  height: 120px;
+  line-height: 120px;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+#form .form-title,
+#form .form-author,
+#form .form-price,
+#form .form-inven,
+#form .form-file {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 70px;
+}
+#form .form-file {
+  text-align: center;
+  height: 30px;
+}
+#form .form-des {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 210px;
+}
+
+#form .form-title input,
+#form .form-author input,
+#form .form-price input,
+#form .form-inven input {
+  width: 100%;
+  height: 80%;
+  font-size: 2em;
+  padding-left: 10px;
+}
+
+#form .form-des textarea {
+  width: 100%;
+  height: 80%;
+  font-size: 2em;
+  padding-left: 10px;
+}
+
+#form .form-btn {
+  width: 20%;
+  margin: 30px 40% 0 40%;
+  height: 50px;
+  color: black;
+  background-color: skyblue;
+  border: skyblue 1px solid;
+  border-radius: 15px;
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+#form .form-btn:hover {
+  color: whitesmoke;
+  background-color: rgb(196, 196, 242);
+  border: whitesmoke 1px solid;
+}

@@ -38,21 +38,28 @@ function Login({ loginSuccess }) {
   };
 
   return (
-    <div>
-      <h1>로그인</h1>
-      <input
-        type="text"
-        placeholder="아이디"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="비밀번호"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleLogin}>로그인</button>
+    <div id="login">
+      <h1>Book Shop Login</h1>
+      <div className="login-id">
+        <input
+          type="text"
+          placeholder="아이디"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </div>
+      <div className="login-pw">
+        <input
+          type="password"
+          placeholder="비밀번호"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+
+      <button className="login-btn" onClick={handleLogin}>
+        로그인
+      </button>
     </div>
   );
 }

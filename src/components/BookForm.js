@@ -56,44 +56,59 @@ function BookForm({ id }) {
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="제목"
-        value={title}
-        className="in-title"
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="작가"
-        value={author}
-        className="in-auth"
-        onChange={(e) => setAuthor(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="가격"
-        value={price}
-        className="in-price"
-        onChange={(e) => setPrice(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="재고"
-        value={inven}
-        className="in-inven"
-        onChange={(e) => setInven(e.target.value)}
-      />
+    <div id="form">
+      <h1>Book Shop Book +</h1>
+      <div className="form-title">
+        <input
+          type="text"
+          placeholder="제목"
+          value={title}
+          className="in-title"
+          onChange={(e) => setTitle(e.target.value)}
+        />
+      </div>
+      <div className="form-author">
+        <input
+          type="text"
+          placeholder="작가"
+          value={author}
+          className="in-auth"
+          onChange={(e) => setAuthor(e.target.value)}
+        />
+      </div>
+      <div className="form-price">
+        <input
+          type="text"
+          placeholder="가격"
+          value={price}
+          className="in-price"
+          onChange={(e) => setPrice(e.target.value)}
+        />
+      </div>
+      <div className="form-inven">
+        <input
+          type="text"
+          placeholder="재고"
+          value={inven}
+          className="in-inven"
+          onChange={(e) => setInven(e.target.value)}
+        />
+      </div>
+      <div className="form-des">
+        <textarea
+          placeholder="내용"
+          value={description}
+          className="in-desc"
+          onChange={(e) => setDescription(e.target.value)}
+        />
+      </div>
+      <div className="form-file">
+        <input type="file" className="in-file" onChange={FileChange} />
+      </div>
 
-      <textarea
-        placeholder="내용"
-        value={description}
-        className="in-desc"
-        onChange={(e) => setDescription(e.target.value)}
-      />
-      <input type="file" className="in-file" onChange={FileChange} />
-      <button onClick={handleUpload}>Upload</button>
+      <button className="form-btn" onClick={handleUpload}>
+        Upload
+      </button>
     </div>
   );
 }

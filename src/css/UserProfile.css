@@ -1,0 +1,52 @@
+#profile h1 {
+  width: 100%;
+  height: 120px;
+  line-height: 120px;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+#profile .profile-id,
+#profile .profile-pw,
+#profile .profile-em {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 70px;
+}
+
+#profile .profile-id input,
+#profile .profile-pw input,
+#profile .profile-em input {
+  width: 100%;
+  height: 80%;
+  font-size: 2em;
+  padding-left: 20px;
+}
+#profile .profile-btns {
+  width: 50%;
+  margin: 30px 25% 0 25%;
+}
+#profile .profile-mod,
+#profile .profile-del {
+  width: 40%;
+  height: 50px;
+  color: black;
+  background-color: skyblue;
+  border: skyblue 1px solid;
+  border-radius: 15px;
+  font-size: 1.5em;
+}
+#profile .profile-mod {
+  margin-right: 17%;
+  margin-left: 20px;
+}
+
+#profile .profile-mod:hover,
+#profile .profile-del:hover {
+  color: whitesmoke;
+  background-color: rgb(196, 196, 242);
+  border: whitesmoke 1px solid;
+}

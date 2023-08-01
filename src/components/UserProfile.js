@@ -62,29 +62,42 @@ function UserProfile({ user, pass, email, loginOut, loginSuccess }) {
 
   return (
     <div>
-      <div>
-        <h1>수정 / 삭제</h1>
-        <input
-          type="text"
-          placeholder="사용자이름"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          readOnly
-        />
-        <input
-          type="text"
-          placeholder="이메일명"
-          value={useremail}
-          onChange={(e) => setUserEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="비밀번호"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button onClick={Modify}>수정</button>
-        <button onClick={Delete}>삭제</button>
+      <div id="profile">
+        <h1>Book Shop Update / Delete</h1>
+        <div className="profile-id">
+          <input
+            type="text"
+            placeholder="사용자이름"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            readOnly
+          />
+        </div>
+        <div className="profile-em">
+          <input
+            type="text"
+            placeholder="이메일명"
+            value={useremail}
+            onChange={(e) => setUserEmail(e.target.value)}
+          />
+        </div>
+        <div className="profile-pw">
+          <input
+            type="password"
+            placeholder="비밀번호"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+
+        <div className="profile-btns">
+          <button className="profile-mod" onClick={Modify}>
+            수정
+          </button>
+          <button className="profile-del" onClick={Delete}>
+            삭제
+          </button>
+        </div>
       </div>
     </div>
   );

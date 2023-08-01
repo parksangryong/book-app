@@ -8,6 +8,7 @@
   height: 30px;
   background-color: gray;
   text-align: right;
+  /* position: fixed; */
 }
 .hi {
   margin-right: 5%;
@@ -15,10 +16,23 @@
   color: white;
 }
 .header ul li {
+  /* padding-top: 30px; */
   display: inline-block;
   width: 16.6%;
   line-height: 70px;
   text-align: center;
   font-size: 1.7em;
   cursor: pointer;
+}
+
+.header a:hover {
+  text-decoration: underline;
+  text-decoration-color: violet;
+  text-decoration-thickness: 5px;
+}
+
+.active {
+  text-decoration: underline;
+  text-decoration-color: skyblue;
+  text-decoration-thickness: 5px;
 }

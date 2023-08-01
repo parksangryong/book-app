@@ -1,9 +1,150 @@
+#bookfull {
+  width: 98%;
+  margin: 0 2% 0 0;
+}
 #book {
-  width: 24%;
+  width: 31.3%;
+  margin-left: 2%;
+  margin-bottom: 20px;
+  height: 240px;
   display: inline-block;
-  border: 1px solid red;
+  background-color: rgb(221, 221, 250);
+  position: relative;
 }
 
 #book img {
-  width: 50px;
+  width: 40%;
+  height: 220px;
+  margin: 10px 3% 10px 3%;
+  float: left;
+}
+
+#book .book-text {
+  width: 50%;
+  height: 220px;
+  margin: 10px 2% 10px 2%;
+  float: right;
+}
+
+#book .book-title,
+#book .book-author,
+#book .book-price,
+#book .book-inven {
+  width: 100%;
+  height: 55px;
+}
+
+#book .book-title span:first-child,
+#book .book-author span:first-child,
+#book .book-price span:first-child,
+#book .book-inven span:first-child {
+  width: 25%;
+  height: 55px;
+  line-height: 55px;
+  font-weight: 600;
+  float: left;
+}
+
+#book .book-price span:last-child,
+#book .book-inven span:last-child {
+  width: 75%;
+  height: 55px;
+  line-height: 55px;
+  float: right;
+  font-weight: bold;
+}
+
+#book .book-title span:last-child,
+#book .book-author span:last-child {
+  margin-top: 17px;
+  width: 75%;
+  height: 38px;
+  line-height: 19px;
+  float: right;
+  font-weight: bold;
+}
+
+#book .book-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 90%;
+}
+
+#book .book-btn button {
+  border-radius: 20px;
+  float: right;
+  width: 25%;
+  height: 30px;
+
+  background-color: rgb(96, 78, 207);
+  color: whitesmoke;
+  border: none;
+  cursor: pointer;
+}
+
+#book .book-btn button:hover {
+  background-color: rgb(68, 131, 190);
+}
+
+#booklist {
+  width: 100%;
+  margin-top: 30px;
+}
+
+#booklist h1 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.booklist-form-btn {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 130px;
+  right: 50px;
+  line-height: 100px;
+  border-radius: 30%;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: rgb(184, 220, 234);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.booklist-form-btn a {
+  color: rgb(75, 21, 126) !important;
+}
+
+.booklist-form-btn:hover {
+  background-color: rgb(227, 206, 227);
+}
+
+.pagelist {
+  width: 60%;
+  height: 30px;
+  line-height: 30px;
+  margin: 20px 20% 20px 20%;
+  text-align: center;
+}
+
+.pagelist div {
+  display: inline-block;
+  width: 8.3%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pagelist div:hover {
+  color: blue;
+}
+
+#active {
+  color: blueviolet;
+}
+
+hr {
+  border: rgb(228, 223, 255) 1px solid;
+  margin-bottom: 20px;
 }

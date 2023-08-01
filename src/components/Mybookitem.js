@@ -143,7 +143,7 @@ function Mybookitem(props) {
               onChange={(e) => setPrice(e.target.value)}
             />
           ) : (
-            <span>{props.price}</span>
+            <span>{props.price} 원</span>
           )}
         </div>
         <div className="book-inven">
@@ -155,20 +155,20 @@ function Mybookitem(props) {
               onChange={(e) => setInven(e.target.value)}
             />
           ) : (
-            <span>{props.inven}</span>
+            <span>{props.inven} 권</span>
           )}
         </div>
-        <div className="book-description">
-          <span>내용 : </span>
-          {edit ? (
-            <textarea
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-            ></textarea>
-          ) : (
-            <span>{props.description}</span>
-          )}
-        </div>
+      </div>
+      <div className="book-description">
+        <span>내용 : </span>
+        {edit ? (
+          <textarea
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          ></textarea>
+        ) : (
+          <span>{props.description}</span>
+        )}
       </div>
       <div className="book-btn">
         {edit ? (

@@ -1,6 +1,6 @@
 //ShoppingCart에서보여주는 장바구니 요약 컴포넌트
 import { useEffect, useState } from "react";
-import "../css/CartSummary.css";
+import "../css/ShoppingCart.css";
 import axios from "axios";
 
 function CartSummary(props) {
@@ -54,18 +54,23 @@ function CartSummary(props) {
   };
 
   return (
-    <div>
-      <img src={props.image_url} width="50px" />
-      <div>제목 = {props.title}</div>
-      <div>작가 = {props.author}</div>
-      <div>남은 갯수 = {props.inven}</div>
-      <div>
-        <button onClick={minusQ}>-</button>
-        {quan} 권<button onClick={plusQ}>+</button>
+    <div id="cartbook">
+      <img src={props.image_url} />
+      <div className="carttext">
+        <div>[{props.title}]</div>
+        <div>작가: {props.author}</div>
+        <div>남은 수: {props.inven} 권</div>
+        <div className="cart-pm">
+          <button onClick={minusQ}>-</button>
+          &nbsp; {quan} 권 &nbsp;<button onClick={plusQ}>+</button>
+        </div>
+        <div>가격: {money} 원</div>
+
+        <div className="cart-btn">
+          <button>주문</button>
+          <button onClick={deleteCart}>삭제</button>
+        </div>
       </div>
-      <div>{money} 원</div>
-      <button>주문</button>
-      <button onClick={deleteCart}>삭제</button>
     </div>
   );
 }

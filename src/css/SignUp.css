@@ -1,0 +1,44 @@
+#sign h1 {
+  width: 100%;
+  height: 120px;
+  line-height: 120px;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+#sign .sign-id,
+#sign .sign-pw,
+#sign .sign-em {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 70px;
+}
+
+#sign .sign-id input,
+#sign .sign-pw input,
+#sign .sign-em input {
+  width: 100%;
+  height: 80%;
+  font-size: 2em;
+  padding-left: 20px;
+}
+
+#sign .sign-btn {
+  width: 20%;
+  margin: 30px 40% 0 40%;
+  height: 50px;
+  color: black;
+  background-color: skyblue;
+  border: skyblue 1px solid;
+  border-radius: 15px;
+  font-size: 1.5em;
+}
+
+#sign .sign-btn:hover {
+  color: whitesmoke;
+  background-color: rgb(196, 196, 242);
+  border: whitesmoke 1px solid;
+}
