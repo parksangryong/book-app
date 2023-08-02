@@ -31,28 +31,39 @@ function ReviewForm({ id, user }) {
   };
 
   return (
-    <div>
-      <div>id : {user}</div>
-      <div>book_id : {title}</div>
-      <div>
-        rating :
-        <select value={rating} onChange={(e) => setRating(e.target.value)}>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
+    <div id="rev-form">
+      <h1>Book Shop Review +</h1>
+      <div id="revs">
+        <div className="rev-form-id">
+          ID : <b> {user}</b>
+        </div>
+        <div className="rev-form-book">
+          책 이름 : <b>{title}</b>
+        </div>
+        <div className="rev-form-rating">
+          평점 : &nbsp;
+          <select value={rating} onChange={(e) => setRating(e.target.value)}>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>{" "}
+          점
+        </div>
       </div>
-      <div>
-        comment :{" "}
+
+      <div className="rev-form-com">
         <textarea
           value={comment}
           onChange={(e) => setComment(e.target.value)}
+          placeholder="리뷰 작성"
         ></textarea>
       </div>
       <div>
-        <button onClick={addReview}>저장</button>
+        <button className="rev-form-btn" onClick={addReview}>
+          저장
+        </button>
       </div>
     </div>
   );

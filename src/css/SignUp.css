@@ -1,32 +1,36 @@
-#sign h1 {
+#rev-form h1 {
   width: 100%;
   height: 120px;
   line-height: 120px;
-  font-size: 3em;
   text-align: center;
   margin-top: 30px;
   margin-bottom: 20px;
+  font-size: 2.5em;
 }
 
-#sign .sign-id,
-#sign .sign-pw,
-#sign .sign-em {
-  width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
+#revs {
+  width: 60%;
+  margin: 0 20% 0 20%;
+}
+
+#rev-form .rev-form-id,
+#rev-form .rev-form-book,
+#rev-form .rev-form-rating {
+  width: 30%;
+  margin-left: 2.5%;
   height: 70px;
+  display: inline-block;
+  line-height: 70px;
+  text-align: center;
 }
 
-#sign .sign-id input,
-#sign .sign-pw input,
-#sign .sign-em input {
-  width: 100%;
-  height: 80%;
-  font-size: 2em;
-  padding-left: 20px;
+#rev-form .rev-form-com textarea {
+  margin: 0 20% 0 20%;
+  width: 60%;
+  height: 100px;
 }
 
-#sign .sign-btn {
+#rev-form .rev-form-btn {
   width: 20%;
   margin: 30px 40% 0 40%;
   height: 50px;
@@ -37,7 +41,7 @@
   font-size: 1.5em;
 }
 
-#sign .sign-btn:hover {
+#rev-form .rev-form-btn:hover {
   color: whitesmoke;
   background-color: rgb(196, 196, 242);
   border: whitesmoke 1px solid;
