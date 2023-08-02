@@ -37,7 +37,7 @@
 #recom5 {
   width: 80%;
   height: 100px;
-  margin: 0 10% 0 10%;
+  margin: 0 6% 0 14%;
 }
 
 #recom5 h4 {
@@ -57,6 +57,7 @@
   margin-left: 4%;
   background-color: rgb(196, 171, 220);
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 #recom5 img {

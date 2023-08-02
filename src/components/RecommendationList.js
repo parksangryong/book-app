@@ -7,7 +7,7 @@ function RecommendationList(props) {
   const [rank, setRank] = useState(0);
   const navigate = useNavigate();
 
-  const result = props.poplist.map((data, index) => (
+  const result = props.poplist.slice(0, 5).map((data, index) => (
     <div className="rere" key={index} onClick={() => setRank(index)}>
       <h4>{index + 1}위</h4>
       <img src={data.image_url} alt={data.title} width="70px" />
