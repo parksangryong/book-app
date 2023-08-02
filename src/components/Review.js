@@ -34,11 +34,10 @@ function Review(props) {
 
   if (!edit) {
     return (
-      <div>
-        <hr />
-        <div>{props.username} : </div>
-        <div>{rating} 점</div>
-        <div>{comment}</div>
+      <div id="review-item">
+        <div>ID : {props.username} </div>
+        <div>평점: {rating} 점</div>
+
         <div className="review-btn">
           {props.user === props.user_id ? (
             <button onClick={updateReview}>수정</button>
@@ -51,19 +50,33 @@ function Review(props) {
             ""
           )}
         </div>
+        <div>{comment}</div>
       </div>
     );
   } else {
     return (
-      <div>
-        <hr />
+      <div id="review-item">
         <div>{props.username} : </div>
         <div>
-          <input
-            type="text"
-            value={rating}
-            onChange={(e) => setRating(e.target.value)}
-          />
+          <select value={rating} onChange={(e) => setRating(e.target.value)}>
+            <option value={1}>1</option>
+            <option value={2}>2</option>
+            <option value={3}>3</option>
+            <option value={4}>4</option>
+            <option value={5}>5</option>
+          </select>
+        </div>
+        <div className="review-btn">
+          {props.user === props.user_id ? (
+            <button onClick={updateReview}>수정</button>
+          ) : (
+            ""
+          )}
+          {props.user === props.user_id ? (
+            <button onClick={deleteRiview}>삭제</button>
+          ) : (
+            ""
+          )}
         </div>
         <div>
           <input
@@ -71,18 +84,6 @@ function Review(props) {
             value={comment}
             onChange={(e) => setComment(e.target.value)}
           />
-        </div>
-        <div className="review-btn">
-          {props.user === props.user_id ? (
-            <button onClick={updateReview}>수정</button>
-          ) : (
-            ""
-          )}
-          {props.user === props.user_id ? (
-            <button onClick={deleteRiview}>삭제</button>
-          ) : (
-            ""
-          )}
         </div>
       </div>
     );

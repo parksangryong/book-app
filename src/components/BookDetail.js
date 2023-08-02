@@ -90,25 +90,35 @@ function BookDetail({ id }) {
 
   if (book[0]) {
     return (
-      <div>
-        <img src={book[0].image_url} width="50px" />
-        <div className="book-data">
-          <div>제목 : {book[0].title}</div>
-          <div>작가 : {book[0].author}</div>
-          <div>가격 : {book[0].price}</div>
-          <div>개수 : {book[0].inven}</div>
-          <div>올린사람 : {book[0].seller_id}</div>
-          <div>내용 : {book[0].description}</div>
-        </div>
-        <div className="book-btn">
-          <button onClick={addCart}>장바구니</button>
-          <button>구매</button>
-        </div>
+      <div id="detail">
+        <div className="detail-book">
+          <img src={book[0].image_url} />
+          <div className="book-data">
+            <div>
+              제목 : <b>{book[0].title}</b>
+            </div>
+            <div>
+              작가 : <b>{book[0].author}</b>
+            </div>
+            <div>
+              가격 : <b>{book[0].price}</b>
+            </div>
+            <div>
+              개수 : <b>{book[0].inven}</b>
+            </div>
+            <div>{book[0].description}</div>
+          </div>
 
-        <hr />
+          <div className="book-btn">
+            <button onClick={addCart}>장바구니</button>
+            <button>구매</button>
+          </div>
+        </div>
 
         <div className="review">
-          리뷰개수({opt}) / {grade} 점
+          <h5>
+            리뷰개수({opt}) / 평점 : {grade} 점
+          </h5>
           {id ? (
             <button
               onClick={() =>

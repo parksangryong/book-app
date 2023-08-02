@@ -17,6 +17,7 @@
   height: 220px;
   margin: 10px 3% 10px 3%;
   float: left;
+  cursor: pointer;
 }
 
 #book .book-text {
