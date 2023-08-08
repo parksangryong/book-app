@@ -35,13 +35,14 @@ function ReviewForm({ id, user }) {
       <h1>Book Shop Review +</h1>
       <div id="revs">
         <div className="rev-form-id">
-          ID : <b> {user}</b>
-        </div>
-        <div className="rev-form-book">
-          책 이름 : <b>{title}</b>
+          <span>ID :</span>{" "}
+          <span>
+            <b> {user}</b>
+          </span>
         </div>
         <div className="rev-form-rating">
-          평점 : &nbsp;
+          <span>평점 :</span>
+          &nbsp;
           <select value={rating} onChange={(e) => setRating(e.target.value)}>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -50,6 +51,12 @@ function ReviewForm({ id, user }) {
             <option value="5">5</option>
           </select>{" "}
           점
+        </div>
+        <div className="rev-form-book">
+          <span>책이름 :</span>{" "}
+          <span>
+            <b> {title}</b>
+          </span>
         </div>
       </div>
 

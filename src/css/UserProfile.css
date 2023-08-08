@@ -24,14 +24,15 @@
   height: 80%;
   font-size: 2em;
   padding-left: 20px;
+  border: 0.6px solid black;
 }
 #profile .profile-btns {
-  width: 50%;
+  width: 51%;
   margin: 30px 25% 0 25%;
 }
 #profile .profile-mod,
 #profile .profile-del {
-  width: 40%;
+  width: 35%;
   height: 50px;
   color: black;
   background-color: skyblue;
@@ -40,8 +41,12 @@
   font-size: 1.5em;
 }
 #profile .profile-mod {
-  margin-right: 17%;
-  margin-left: 20px;
+  float: left;
+  margin: 0;
+}
+#profile .profile-del {
+  float: right;
+  margin: 0;
 }
 
 #profile .profile-mod:hover,
@@ -49,4 +54,48 @@
   color: whitesmoke;
   background-color: rgb(196, 196, 242);
   border: whitesmoke 1px solid;
+}
+
+@media screen and (max-width: 700px) {
+  #profile .profile-id,
+  #profile .profile-pw,
+  #profile .profile-em {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #profile .profile-id input,
+  #profile .profile-pw input,
+  #profile .profile-em input {
+    height: 50%;
+    font-size: 1.3em;
+    padding-left: 5px;
+  }
+
+  #profile h1 {
+    font-size: 2em;
+  }
+  #profile .profile-btns {
+    width: 80%;
+    margin: 30px 10% 0 10%;
+  }
+  #profile .profile-mod,
+  #profile .profile-del {
+    width: 30%;
+    height: 40px;
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #profile h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  #profile h1 {
+    font-size: 1.2em;
+  }
 }

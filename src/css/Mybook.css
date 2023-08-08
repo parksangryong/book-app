@@ -3,7 +3,7 @@
   float: left;
   margin-left: 2.5%;
   margin-bottom: 20px;
-  height: 420px;
+  height: 440px;
   background-color: rgb(221, 221, 250);
   position: relative;
 }
@@ -14,12 +14,17 @@
   margin: 10px 3% 10px 3%;
   float: left;
 }
+#book-item input[type="file"] {
+  font-size: 0.5em;
+  width: 40%;
+}
 
 #book-item .book-text {
   width: 50%;
   height: 220px;
   margin: 10px 2% 10px 2%;
   float: right;
+  font-size: 0.9em;
 }
 
 #book-item .book-description {
@@ -126,4 +131,43 @@
   width: 40%;
   margin-top: 50px;
   margin-left: 2%;
+}
+
+@media screen and (max-width: 1000px) {
+  #book-item .book-text {
+    font-size: 0.7em;
+  }
+  #book-item .book-price input,
+  #book-item .book-inven input {
+    font-size: 0.7em;
+  }
+
+  #book-item .book-title input,
+  #book-item .book-author input {
+    font-size: 0.7em;
+  }
+  #book-item .book-description textarea {
+    font-size: 0.8em;
+  }
+  #book-item .book-description {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #book-item {
+    width: 46%;
+  }
+  #mybook h2 {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #book-item {
+    width: 95%;
+  }
+  #mybook h2 {
+    margin-bottom: 0;
+  }
 }

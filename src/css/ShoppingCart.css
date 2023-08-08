@@ -37,12 +37,13 @@
   text-align: center;
 }
 .cartsub .subbtn button {
-  width: 30%;
+  width: 35%;
   height: 30px;
   color: aliceblue;
   background-color: blueviolet;
   cursor: pointer;
   border: none;
+  font-size: 0.6em;
 }
 .cartsub .subbtn button:hover {
   background-color: skyblue;
@@ -51,11 +52,21 @@
 #cartbook {
   width: 23%;
   background-color: rgb(229, 221, 236);
-  height: 230px;
+  height: 260px;
   float: left;
   margin-left: 1.6%;
   position: relative;
   margin-bottom: 10px;
+}
+
+#cartbook h6 {
+  position: relative;
+  width: 100%;
+  height: 25px;
+  margin-top: 5px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 0.65em;
 }
 
 #cartbook img {
@@ -74,10 +85,6 @@
 
 #cartbook .carttext div {
   line-height: 30px;
-}
-
-#cartbook .carttext div:first-child {
-  font-weight: bold;
 }
 
 .cart-pm button {
@@ -112,4 +119,40 @@
 .cart-btn button:hover,
 .cart-pm button:hover {
   background-color: skyblue;
+}
+
+@media screen and (max-width: 1000px) {
+  #cartbook {
+    width: 31%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #cartbook {
+    width: 47.5%;
+  }
+  #shopcart .cartsub {
+    width: 80%;
+    margin: 10px 10% 10px 10%;
+  }
+  .cartsub .subbtn button {
+    width: 40%;
+    height: 30px;
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #cartbook {
+    width: 97%;
+  }
+  #shopcart .cartsub {
+    width: 95%;
+    margin: 10px 2.5% 10px 2.5%;
+    font-size: 0.65em;
+  }
+  .cartsub .subbtn button {
+    width: 60%;
+    height: 30px;
+  }
 }

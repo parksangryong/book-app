@@ -65,3 +65,18 @@
 #review-item div:nth-child(3) button:hover {
   font-weight: bold;
 }
+
+@media screen and (max-width: 700px) {
+  #review-item div:nth-child(3) button {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #review-item {
+    font-size: 0.8em;
+  }
+  #review-item div:nth-child(3) button {
+    width: 25%;
+  }
+}

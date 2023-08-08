@@ -24,6 +24,7 @@
   height: 80%;
   font-size: 2em;
   padding-left: 20px;
+  border: 0.6px solid black;
 }
 
 #sign .sign-btn {
@@ -41,4 +42,35 @@
   color: whitesmoke;
   background-color: rgb(196, 196, 242);
   border: whitesmoke 1px solid;
+}
+
+@media screen and (max-width: 700px) {
+  #sign .sign-id,
+  #sign .sign-pw,
+  #sign .sign-em {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #sign .sign-id input,
+  #sign .sign-pw input,
+  #sign .sign-em input {
+    height: 60%;
+    font-size: 1.5em;
+    padding-left: 5px;
+  }
+
+  #sign .sign-btn {
+    width: 40%;
+    margin: 30px 30% 0 30%;
+    height: 40px;
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #sign h1 {
+    font-size: 1.9em;
+  }
 }

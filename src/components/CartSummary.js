@@ -55,9 +55,9 @@ function CartSummary(props) {
 
   return (
     <div id="cartbook">
+      <h6>[{props.title}]</h6>
       <img src={props.image_url} />
       <div className="carttext">
-        <div>[{props.title}]</div>
         <div>작가: {props.author}</div>
         <div>남은 수: {props.inven} 권</div>
         <div className="cart-pm">
